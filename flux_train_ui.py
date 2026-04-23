@@ -331,7 +331,6 @@ with gr.Blocks(theme=theme, css=css) as demo:
                                     interactive=False,
                                     scale=2,
                                     show_label=False,
-                                    show_share_button=False,
                                     show_download_button=False,
                                 )
                                 locals()[f"caption_{i}"] = gr.Textbox(
@@ -411,4 +410,4 @@ with gr.Blocks(theme=theme, css=css) as demo:
     do_captioning.click(fn=run_captioning, inputs=[images, concept_sentence] + caption_list, outputs=caption_list)
 
 if __name__ == "__main__":
-    demo.launch(share=True, show_error=True)
+    demo.launch(show_error=True)
